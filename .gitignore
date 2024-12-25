@@ -3,6 +3,7 @@ npm_modules
 server/node_modules
 social-media-app/node_modules
 server/serviceAccountKey.json
+.env
 
 social-media-app/.env
 

@@ -74,7 +74,7 @@ const NewsFeedPage: React.FC = () => {
               </div>
             )}
             <div className="flex items-center justify-between w-full">
-              <FollowButton userId={post.userId} isFollowing={post.isFollowing} />
+              <FollowButton />
               <button
                 onClick={() => toggleLike(post.id)}
                 className={`focus:outline-none ${likedPosts.has(post.id) ? 'text-red-500' : 'text-gray-500 hover:text-red-500'}`}

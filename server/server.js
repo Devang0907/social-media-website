@@ -4,11 +4,6 @@ const cors = require('cors');
 const path = require('path');
 const admin = require('firebase-admin'); // Firebase Admin SDK
 
-// Firebase Admin SDK initialization
-const serviceAccount = require('./serviceAccountKey.json');
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
 
 // Mock data for posts and users
 let posts = [

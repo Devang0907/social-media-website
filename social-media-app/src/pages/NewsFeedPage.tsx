@@ -18,7 +18,7 @@ const GET_NEWS_FEED_QUERY = gql`
 `;
 
 const NewsFeedPage: React.FC = () => {
-  const { data, loading, error, fetchMore } = useQuery(GET_NEWS_FEED_QUERY);
+  const { data, loading, error } = useQuery(GET_NEWS_FEED_QUERY);
   const [likedPosts, setLikedPosts] = useState<Set<string>>(new Set());
 
   const fetchMorePosts = () => {
@@ -74,7 +74,7 @@ const NewsFeedPage: React.FC = () => {
               </div>
             )}
             <div className="flex items-center justify-between w-full">
-              <FollowButton />
+              <FollowButton  />
               <button
                 onClick={() => toggleLike(post.id)}
                 className={`focus:outline-none ${likedPosts.has(post.id) ? 'text-red-500' : 'text-gray-500 hover:text-red-500'}`}

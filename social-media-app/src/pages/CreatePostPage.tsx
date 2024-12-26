@@ -27,7 +27,7 @@ const CreatePostPage = ({ userId }: { userId: string }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const { data } = await createPost({
+      const { } = await createPost({
         variables: {
           content,
           image,
